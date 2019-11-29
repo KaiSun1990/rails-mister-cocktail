@@ -1,0 +1,13 @@
+// Import page-specific CSS files here.
+@import "home";
+
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.floating-button {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}

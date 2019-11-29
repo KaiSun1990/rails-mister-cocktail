@@ -1,0 +1,14 @@
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i2.wp.com/www.christiesrealestate.com/blog/wp-content/uploads/2018/11/Bathtub_Gin_Cocktails_banner.jpg?resize=1600%2C550&ssl=1)">
+  Mixology
+</div>
+
+<div class="new-form-container">
+  <h1>Add a new cocktail</h1>
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <%= f.submit "add Cocktail", class: "btn btn-primary generic-button" %>
+  <% end %>
+  <%= link_to cocktails_path, {class: "btn btn-primary generic-button"} do %>
+    <span class="label label-primary">All cocktails</span>
+  <% end %>
+</div>

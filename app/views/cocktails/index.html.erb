@@ -1,0 +1,18 @@
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i2.wp.com/www.christiesrealestate.com/blog/wp-content/uploads/2018/11/Bathtub_Gin_Cocktails_banner.jpg?resize=1600%2C550&ssl=1)">
+  Mixology
+  <%= link_to new_cocktail_path, {class: "btn btn-primary floating-button generic-button"} do %>
+    <span class="label label-primary">Add new cocktail</span>
+  <% end %>
+</div>
+
+
+<div class="flex-container">
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)">
+        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

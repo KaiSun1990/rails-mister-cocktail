@@ -1,0 +1,14 @@
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i2.wp.com/www.christiesrealestate.com/blog/wp-content/uploads/2018/11/Bathtub_Gin_Cocktails_banner.jpg?resize=1600%2C550&ssl=1)">
+  Mixology
+</div>
+
+<div class="new-form-container">
+  <h1><%= @cocktail.name %> - adding a dose...</h1>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description  %>
+    <%= f.association :ingredient, collection: Ingredient.all, prompt: "Choose an ingredient" %>
+    <%= f.input :cocktail_id, :as => :hidden, :input_html => { :value => params[:cocktail_id] } %>
+
+    <%= f.submit "add a dose", class: "btn btn-primary generic-button" %>
+  <% end %>
+</div>
